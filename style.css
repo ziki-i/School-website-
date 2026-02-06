@@ -1,0 +1,62 @@
+/* Basic Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; line-height: 1.6; background: #f4f4f4; color: #333; }
+
+/* Header */
+header { background: #2a6f97; color: white; padding: 20px 0; text-align: center; }
+header h1 { margin: 0; }
+.scroll-text {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    background: oklab(97.363% 0.00065 0.00147);
+    padding: 10px 0;
+    font-weight: bold;
+    color: #144d64;
+}
+
+.scroll-text {
+    animation: moveText 20s linear infinite;
+}
+
+@keyframes moveText {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+.image-scroll {
+    overflow: hidden;
+    background: #f4f4f4;
+    padding: 20px 0;
+}
+
+.scroll-container {
+    display: flex;
+    width: max-content;
+    animation: scrollImages 10s linear infinite;
+}
+
+.scroll-container img {
+    width: 300px; /* adjust size */
+    margin-right: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px gray;
+}
+
+@keyframes scrollImages {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+
+/* Navigation */
+nav { background: #144d64; text-align: center; padding: 10px 0; }
+nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
+nav a:hover { color: #ffcc00; }
+
+/* Sections */
+section { padding: 20px; max-width: 1000px; margin: auto; background: white; margin-top: 20px; border-radius: 5px; }
+
+/* Footer */
+footer { text-align: center; padding: 10px; background: #2a6f97; color: white; margin-top: 20px; }
